@@ -136,6 +136,7 @@ def get_links(html):
 
 
 if __name__ == '__main__':
-    print link_crawler('http://example.webscraping.com', '/(places|default|view)', delay=0, num_retries=1, user_agent='BadCrawler')
-    print link_crawler('http://example.webscraping.com', '/(places|default|view)', delay=0, num_retries=1, max_depth=1,
-                 user_agent='GoodCrawler')
+    #print link_crawler('http://example.webscraping.com', '/(places|default|view)', delay=0, num_retries=1, user_agent='BadCrawler')
+    #print link_crawler('http://example.webscraping.com', '/(places|default|view)', delay=0, num_retries=1, max_depth=1,
+    #            user_agent='GoodCrawler')
+    print link_crawler('http://www.windline.info','/*', delay=0, num_retries=1)

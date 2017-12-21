@@ -1,2 +1,2 @@
 import whois
-print whois.whois('www.windline.info')
+print whois.whois('http://www.windline.info')

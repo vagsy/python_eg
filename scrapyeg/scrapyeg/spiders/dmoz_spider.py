@@ -2,7 +2,7 @@
 import scrapy
 
 class DmozSpider(scrapy.Spider):
-    name = "dmoz"
+    name = "dmoz" #该名字必须是唯一的，您不可以为不同的Spider设定相同的名字。
     allowed_domains = ["dmoz.org"]
     start_urls = [
         "http://www.windline.info/archives/"

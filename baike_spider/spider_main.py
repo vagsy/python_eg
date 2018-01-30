@@ -1,4 +1,5 @@
-from baike_spider import url_manager, html_downloader, html_parser, html_outputer
+# from baike_spider import url_manager, html_downloader, html_parser, html_outputer
+import url_manager, html_downloader, html_parser, html_outputer
 class SpiderMain(object):
     def __init__(self):
         self.urls = url_manager.UrlManager()
@@ -22,7 +23,7 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
                 
-                if count == 100:
+                if count == 1000:
                     break
                 
                 count = count + 1

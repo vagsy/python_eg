@@ -3,7 +3,6 @@ import scrapy
 # 从...路径,引入...类
 from ITcast.items import ItcastItem
 
-
 class ItcastSpider(scrapy.Spider):
     # 爬虫名，启动爬虫时需要的参数*必需
     name = "itcast"

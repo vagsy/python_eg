@@ -9,7 +9,7 @@ import json
 
 class TencentPipeline(object):
     def __init__(self):
-        self.f = open("tencent.csv" , "w")
+        self.f = open("tencent.json" , "w")
 
     def process_item(self, item, spider):
         content = json.dumps(dict(item), ensure_ascii = False) + ",\n"

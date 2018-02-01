@@ -24,7 +24,7 @@ class TencentItem(scrapy.Item):
      peopleNumber = scrapy.Field()
 
      # 工作地点
-     workLacation = scrapy.Field()
+     workLocation = scrapy.Field()
 
      # 发布时间
      publishTime = scrapy.Field()

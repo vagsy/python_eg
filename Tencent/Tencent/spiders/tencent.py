@@ -26,7 +26,7 @@ class TencentSpider(scrapy.Spider):
                 item['positionType'] = ""
 
             item['peopleNumber'] = node.xpath("./td[3]/text()").extract()[0].encode("utf-8")
-            item['workLacation'] = node.xpath("./td[4]/text()").extract()[0].encode("utf-8")
+            item['workLocation'] = node.xpath("./td[4]/text()").extract()[0].encode("utf-8")
             item['publishTime'] = node.xpath("./td[5]/text()").extract()[0].encode("utf-8")
 
             yield item

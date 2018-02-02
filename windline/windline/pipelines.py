@@ -4,12 +4,11 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
 import json
 
-class TencentPipeline(object):
+class WindlinePipeline(object):
     def __init__(self):
-        self.f = open("tencent.json", "w")
+        self.f = open("windtitle.json", "w")
 
     def process_item(self, item, spider):
         content = json.dumps(dict(item), ensure_ascii = False) + ",\n"

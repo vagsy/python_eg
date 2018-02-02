@@ -35,8 +35,7 @@ class TencentSpider(scrapy.Spider):
         #     self.offset += 10
         #     url = self.baseURL + str(self.offset)
         #     yield scrapy.Request(url, callback = self.parse)
-
         if not len(response.xpath("//a[@class='noactive' and @id='next']")):
             url = response.xpath("//a[@id='next']/@href").extract()[0]
-
+        
             yield scrapy.Request("http://hr.tencent.com/" + url, callback = self.parse)

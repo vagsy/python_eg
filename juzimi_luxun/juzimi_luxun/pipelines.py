@@ -7,12 +7,12 @@
 
 import json
 
-class TencentPipeline(object):
+class JuzimiLuxunPipeline(object):
     def __init__(self):
-        self.f = open("tencent.json", "w")
+        self.f = open("juzimi_luxun.json", "w")
 
     def process_item(self, item, spider):
-        content = json.dumps(dict(item), ensure_ascii = False) + ",\n"
+        content = json.dumps(dict(item), ensure_ascii=False) + ",\n"
         self.f.write(content)
         return item
 

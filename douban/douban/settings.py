@@ -16,9 +16,9 @@ NEWSPIDER_MODULE = 'douban.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# from faker import Factory
-# f = Factory.create()
-# USER_AGENT = f.user_agent()
+from faker import Factory
+f = Factory.create()
+USER_AGENT = f.user_agent()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True

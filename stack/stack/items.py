@@ -12,3 +12,5 @@ class StackItem(scrapy.Item):
     # define the fields for your item here like:
     title = scrapy.Field()
     url = scrapy.Field()
+    question = scrapy.Field()
+    answer = scrapy.Field()

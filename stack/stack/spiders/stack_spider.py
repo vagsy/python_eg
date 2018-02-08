@@ -13,7 +13,7 @@ class StackSpiderSpider(scrapy.Spider):
             item = StackItem()
             item['title'] = question.xpath(
                 'a[@class="question-hyperlink"]/text()').extract()[0]
-            item['url'] = question.xpath(
+            item['url'] = "http://stackoverflow.com" + question.xpath(
                 'a[@class="question-hyperlink"]/@href').extract()[0]
             yield item
 

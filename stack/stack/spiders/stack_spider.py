@@ -23,10 +23,10 @@ class StackSpiderSpider(scrapy.Spider):
     def parse_inside(self, response):
 
         item = StackItem()
-        item['title'] = response.xpath('//a[@class="question-hyperlink"]/text()').extract()[0]
+        item['title'] = response.xpath("//a[@class='question-hyperlink']/text()").extract()[0]
         item['url'] = response.url
-        item['question'] = response.xpath('//div[@class="question"]/table/tbody/tr/td[@class="postcell"]/node()')
-        item['answer'] = response.xpath('//div[@class="answer"]/table/tbody/tr/td[@class="answercell"]/node()')
+        item['question'] = response.xpath("//td[@class='postcell']/div/div/p").extract()
+        item['answer'] = response.xpath("//td[@class='answercell']/div/p").extract()
 
         yield item
 

@@ -19,9 +19,14 @@ class HuxiuSpider(scrapy.Spider):
 
     def parse_article(self, response):
         detail = response.xpath('//div[@class="article-wrap"]')
+        post_time = detail.xpath('div[@class="article-author"]/div/span[1]/text()')[0].extract()
         item = HuxiuItem()
         item['title'] = detail.xpath('h1/text()')[0].extract()
         item['link'] = response.url
-        item['posttime'] = detail.xpath('div[@class="article-author"]/div/span[1]/text()')[0].extract()
-        # print(item['title'], item['link'], item['posttime'])
+        if post_time:
+            item['post_time'] = post_time
+        else:
+            item['post_time'] = detail.xpath('div[@class="article-author"]/span[@class="article-time"]/text()')[
+                                0].extract()
+        # print(item['title'], item['link'], item['post_time'])
         yield item

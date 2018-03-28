@@ -1,8 +1,8 @@
-**抓取知乎live
+**抓取知乎live**
 
-```存储在sqlite```
+>存储在sqlite
 
-```python2.7环境下 pipelines下加入```
+>python2.7环境下 pipelines下加入
 
 ```javascript
 import sys
